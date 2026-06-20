@@ -1,0 +1,95 @@
+project:
+  name: far-sql
+  root: .
+  random_seed: 42
+
+environment:
+  conda_env: EquSQL
+  verieql_root: third_party/VeriEQL
+  verieql_converter_reference: third_party/convert_for_verieql_format.py
+
+data_sources:
+  calibration:
+    dataset: calibration
+    path: data/raw/leetcode.out
+    format: verieql_record
+  test_leetcode:
+    dataset: test_leetcode
+    sources:
+      - path: data/raw/leetcode_equ_test.jsonl
+        label: yes
+      - path: data/raw/leetcode_neq_test.jsonl
+        label: no
+  test_calcite_spider:
+    dataset: test_calcite_spider
+    sources:
+      - path: data/raw/calcite-232-all-equ.jsonl
+        label: yes
+      - path: data/raw/spider-DIN-180-all-inequ.jsonl
+        label: no
+
+standard_data:
+  test_leetcode: data/standard/test_leetcode.jsonl
+  test_calcite_spider: data/standard/test_calcite_spider.jsonl
+
+verieql:
+  sample_bound: 10
+  mode: train
+  cores: 16
+  integrity_constraint: 1
+  official_timeout_sec: 600
+  candidate_budgets_sec: [1, 2, 3, 5, 10, 30, 60, 120]
+  autobudget_reference_sec: 120
+  latency_budgets_sec: [1, 2, 3, 5, 10, 30, 60, 120]
+  status_policy: runtime_strict
+  dataset_construction_policy: leetcode_split_any_refuted_else_checked
+  static_unsupported_policy: run
+
+budget:
+  epsilon: 0.03
+  min_coverage_threshold: 0.20
+  default_budget_sec: 10
+
+routing_policy:
+  path: outputs/budget/routing_policy.json
+  candidate_budgets_sec: [0, 1, 2, 3, 5, 10]
+  reference_budget_sec: 120
+  zero_budget_levels: [fine, medium, compat_bucket]
+  min_support:
+    fine: 80
+    medium: 120
+    compat_bucket: 40
+    bucket: 1
+
+experiments:
+  test_splits: [test_leetcode, test_calcite_spider]
+  fixed_budgets_sec: [1, 2, 3, 5, 10, 30, 60, 120]
+  autobudget_strategy_name: adaptive_accuracy
+  official_strategy_name: official600
+  main_fallback_strategy: self_consistency
+
+fallback:
+  models:
+    - key: qwen25_coder_1_5b_base
+      path: Qwen/Qwen2.5-Coder-1.5B-Instruct
+      enabled: true
+    - key: qwen3_1_7b_base
+      path: Qwen/Qwen3-1.7B
+      enabled: true
+    - key: qwen25_coder_1_5b_100sft_cot
+      path: models/Qwen2.5-Coder-1.5B-farsql-sft
+      enabled: true
+    - key: qwen3_1_7b_100sft_cot
+      path: models/Qwen3-1.7B-farsql-sft
+      enabled: true
+  num_samples: 3
+  temperature: 0.7
+  top_p: 0.9
+  max_new_tokens: 6000
+  max_model_len: 32000
+  batch_size: 900
+  tensor_parallel_size: 1
+  gpu_memory_utilization: 0.9
+  strategies: [always_output, self_consistency, majority, risk_gated]
+  default_strategy: self_consistency
+  prompt_variant: training_compatible

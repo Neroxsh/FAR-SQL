@@ -1,0 +1,11 @@
+{
+  "test_leetcode": {
+    "path": "data/standard/test_leetcode.jsonl",
+    "rows": 1300
+  },
+  "test_calcite_spider": {
+    "path": "data/standard/test_calcite_spider.jsonl",
+    "rows": 412
+  },
+  "note": "Only final test inputs are standardized here. Calibration reads the precomputed VeriEQL record directly."
+}

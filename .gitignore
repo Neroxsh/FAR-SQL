@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+venv/
+outputs/
+data/raw/
+models/
+third_party/
+*.log
+*.tmp
+wandb/
+

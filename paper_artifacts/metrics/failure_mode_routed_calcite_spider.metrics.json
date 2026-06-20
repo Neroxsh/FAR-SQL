@@ -1,0 +1,67 @@
+{
+  "routing": {
+    "conversion_error": [
+      "轨迹",
+      "unanimous"
+    ],
+    "runtime_error": [
+      "反例",
+      "majority"
+    ],
+    "timeout": null,
+    "unsupported_runtime": [
+      "极简",
+      "majority"
+    ],
+    "zero_budget_routed": [
+      "反例",
+      "majority"
+    ]
+  },
+  "summary": {
+    "qwen25_base": {
+      "yes": 73.27586206896552,
+      "no": 62.77777777777778,
+      "gm": 67.82400596721351,
+      "overall": 68.68932038834951,
+      "wrong": 123,
+      "uncertain": 6,
+      "reviewed": 112,
+      "changed": 29,
+      "touched_determined": 0
+    },
+    "qwen25_sft": {
+      "yes": 85.77586206896552,
+      "no": 82.22222222222223,
+      "gm": 83.98024763203051,
+      "overall": 84.22330097087378,
+      "wrong": 65,
+      "uncertain": 0,
+      "reviewed": 112,
+      "changed": 9,
+      "touched_determined": 0
+    },
+    "qwen3_base": {
+      "yes": 78.44827586206897,
+      "no": 81.11111111111111,
+      "gm": 79.76858291284465,
+      "overall": 79.6116504854369,
+      "wrong": 84,
+      "uncertain": 0,
+      "reviewed": 112,
+      "changed": 10,
+      "touched_determined": 0
+    },
+    "qwen3_sft": {
+      "yes": 84.05172413793103,
+      "no": 83.33333333333333,
+      "gm": 83.69175792649827,
+      "overall": 83.7378640776699,
+      "wrong": 67,
+      "uncertain": 0,
+      "reviewed": 112,
+      "changed": 12,
+      "touched_determined": 0
+    }
+  }
+}

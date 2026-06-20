@@ -1,0 +1,12 @@
+Backbone,Variant,Acc_eq,Acc_neq,GM,Und
+Qwen2.5-SFT,Minimal VeriEQL Signal,75.86,82.22,78.98,0
+Qwen2.5-SFT,Full VeriEQL Context,75.43,87.22,81.11,0
+Qwen2.5-SFT,FAR-SQL,85.78,82.22,83.98,0
+Qwen3-SFT,Minimal VeriEQL Signal,76.29,81.11,78.67,0
+Qwen3-SFT,Full VeriEQL Context,73.71,83.33,78.37,0
+Qwen3-SFT,FAR-SQL,84.05,83.33,83.69,0
+Qwen2.5,Base + FAR-SQL,73.28,62.78,67.82,6
+Qwen2.5,SFT + FAR-SQL,85.78,82.22,83.98,0
+Qwen3,Base + FAR-SQL,78.45,81.11,79.77,0
+Qwen3,SFT + FAR-SQL,84.05,83.33,83.69,0
+

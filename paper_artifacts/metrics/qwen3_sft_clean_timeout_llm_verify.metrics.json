@@ -1,0 +1,75 @@
+{
+  "test_leetcode": {
+    "samples": 1300,
+    "correct": 1204,
+    "decided": 1299,
+    "wrong": 95,
+    "overall_acc": 0.9261538461538461,
+    "coverage": 0.9992307692307693,
+    "accuracy_on_decided": 0.9268668206312548,
+    "avg_formal_runtime": 16.638617867692307,
+    "p95_formal_runtime": 76.27270484999997,
+    "avg_total_runtime": 16.965326283239282,
+    "p95_total_runtime": 77.14676024539122,
+    "decision_sources": {
+      "model_assisted": 480,
+      "abstained": 1,
+      "verified": 819
+    },
+    "router_routes": {
+      "trace_guided_runtime_error": 94,
+      "verified": 819,
+      "base_majority": 5,
+      "timeout_positive_prior_llm": 382
+    }
+  },
+  "test_calcite_spider": {
+    "samples": 412,
+    "correct": 331,
+    "decided": 412,
+    "wrong": 81,
+    "overall_acc": 0.8033980582524272,
+    "coverage": 1.0,
+    "accuracy_on_decided": 0.8033980582524272,
+    "avg_formal_runtime": 13.738723378640776,
+    "p95_formal_runtime": 78.82464399999988,
+    "avg_total_runtime": 14.029620189916752,
+    "p95_total_runtime": 79.08573898632173,
+    "decision_sources": {
+      "model_assisted": 245,
+      "verified": 167
+    },
+    "router_routes": {
+      "base_majority": 81,
+      "timeout_positive_prior_llm": 85,
+      "verified": 167,
+      "witness_guided_conversion_error": 70,
+      "trace_guided_runtime_error": 9
+    }
+  },
+  "combined": {
+    "samples": 1712,
+    "correct": 1535,
+    "decided": 1711,
+    "wrong": 176,
+    "overall_acc": 0.8966121495327103,
+    "coverage": 0.9994158878504673,
+    "accuracy_on_decided": 0.8971361776738749,
+    "avg_formal_runtime": 15.940746063084113,
+    "p95_formal_runtime": 76.53703965000003,
+    "avg_total_runtime": 16.25883626545372,
+    "p95_total_runtime": 77.41109504539128,
+    "decision_sources": {
+      "model_assisted": 725,
+      "abstained": 1,
+      "verified": 986
+    },
+    "router_routes": {
+      "trace_guided_runtime_error": 103,
+      "verified": 986,
+      "base_majority": 86,
+      "timeout_positive_prior_llm": 467,
+      "witness_guided_conversion_error": 70
+    }
+  }
+}

@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use FAR-SQL, please cite the accompanying artifact and paper."
+title: "FAR-SQL: Failure-Aware Routing for SQL Equivalence Judgment"
+authors:
+  - family-names: "Xing"
+    given-names: "Shihao"
+year: 2026
+license: MIT

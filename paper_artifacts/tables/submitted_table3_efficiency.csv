@@ -1,0 +1,10 @@
+Method,Backbone_or_budget,GM,Avg_s,P95_s
+Model-only Self-Consistency@3,Qwen2.5-SFT,76.20,0.51,0.51
+Model-only Self-Consistency@3,Qwen3-SFT,77.88,0.47,0.47
+Fixed-budget VeriEQL,VeriEQL@10s,32.41,8.60,28.45
+Fixed-budget VeriEQL,VeriEQL@30s,36.80,19.90,69.16
+Fixed-budget VeriEQL,VeriEQL@60s,38.19,35.00,138.04
+Fixed-budget VeriEQL,VeriEQL@120s,38.46,78.27,296.13
+FAR-SQL,Qwen2.5-SFT,83.98,13.97,73.84
+FAR-SQL,Qwen3-SFT,83.69,13.93,73.84
+

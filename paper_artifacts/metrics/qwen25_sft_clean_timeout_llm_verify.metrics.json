@@ -1,0 +1,76 @@
+{
+  "test_leetcode": {
+    "samples": 1300,
+    "correct": 1043,
+    "decided": 1297,
+    "wrong": 254,
+    "overall_acc": 0.8023076923076923,
+    "coverage": 0.9976923076923077,
+    "accuracy_on_decided": 0.8041634541249036,
+    "avg_formal_runtime": 16.638617867692307,
+    "p95_formal_runtime": 76.27270484999997,
+    "avg_total_runtime": 16.941212027417965,
+    "p95_total_runtime": 77.0229218479943,
+    "decision_sources": {
+      "model_assisted": 478,
+      "verified": 819,
+      "abstained": 3
+    },
+    "router_routes": {
+      "trace_guided_runtime_error": 94,
+      "verified": 819,
+      "base_majority": 5,
+      "timeout_positive_prior_llm": 382
+    }
+  },
+  "test_calcite_spider": {
+    "samples": 412,
+    "correct": 329,
+    "decided": 411,
+    "wrong": 82,
+    "overall_acc": 0.7985436893203883,
+    "coverage": 0.9975728155339806,
+    "accuracy_on_decided": 0.8004866180048662,
+    "avg_formal_runtime": 13.738723378640776,
+    "p95_formal_runtime": 78.82464399999988,
+    "avg_total_runtime": 14.082123645846794,
+    "p95_total_runtime": 79.11426021274056,
+    "decision_sources": {
+      "model_assisted": 244,
+      "verified": 167,
+      "abstained": 1
+    },
+    "router_routes": {
+      "base_majority": 81,
+      "timeout_positive_prior_llm": 85,
+      "verified": 167,
+      "witness_guided_conversion_error": 70,
+      "trace_guided_runtime_error": 9
+    }
+  },
+  "combined": {
+    "samples": 1712,
+    "correct": 1372,
+    "decided": 1708,
+    "wrong": 336,
+    "overall_acc": 0.8014018691588785,
+    "coverage": 0.9976635514018691,
+    "accuracy_on_decided": 0.8032786885245902,
+    "avg_formal_runtime": 15.940746063084113,
+    "p95_formal_runtime": 76.53703965000003,
+    "avg_total_runtime": 16.25316038418939,
+    "p95_total_runtime": 77.28725664799435,
+    "decision_sources": {
+      "model_assisted": 722,
+      "verified": 986,
+      "abstained": 4
+    },
+    "router_routes": {
+      "trace_guided_runtime_error": 103,
+      "verified": 986,
+      "base_majority": 86,
+      "timeout_positive_prior_llm": 467,
+      "witness_guided_conversion_error": 70
+    }
+  }
+}
